@@ -31,7 +31,7 @@ h_f = 10.67 * L * Q^1.852 / (C^1.852 * D^4.87)
 ## Setup
 
 ```bash
-git clone https://github.com/naomi197/water-network-optimizer.git
+git clone https://github.com/fazeli1977-dot/water-network-optimizer.git
 cd water-network-optimizer
 python -m venv .venv
 source .venv/bin/activate
@@ -68,10 +68,9 @@ tests/
 
 ## Related work
 
-- [CleanFlow Ghana](https://github.com/naomi197/cleanflow-ghana) — water-pollution reporting and priority ranking
-- [BeamSolver](https://github.com/naomi197/beam-solver) — 2D beam diagrams and PDF reports
-- [Truss Structural Optimizer](https://github.com/naomi197/truss-structural-optimizer) — 2D truss FEA and section sizing
-- [ClimaScope](https://github.com/naomi197/climascope) — live climate observatory for Android and the browser
+- [water-sampling-app](https://github.com/fazeli1977-dot/water-sampling-app)
+- [ClimateLens](https://github.com/fazeli1977-dot/ClimateLens)
+- [SAR-MotionLens](https://github.com/fazeli1977-dot/SAR-MotionLens)
 
 ## License
 
@@ -79,4 +78,4 @@ MIT License. See [LICENSE](LICENSE).
 
 ## Author
 
-Alireza Sani — [naomi197](https://github.com/naomi197)
+Alireza Sani — [fazeli1977-dot](https://github.com/fazeli1977-dot)
