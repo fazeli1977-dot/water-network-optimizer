@@ -14,4 +14,6 @@ def select_optimal_diameter(flow_lps, length_m, roughness_c=130.0, min_v=0.6, ma
         if v <= max_v:
             hf = head_loss_hazen_williams(flow_m3s, d_mm / 1000.0, length_m, roughness_c)
             return d_mm, v, hf
-    return STANDARD_DIAMETERS_MM[-1], flow_velocity(flow_m3s, STANDARD_DIAMETERS_MM[-1]/1000.0), 0.0
+    d_m = STANDARD_DIAMETERS_MM[-1] / 1000.0
+    return (STANDARD_DIAMETERS_MM[-1], flow_velocity(flow_m3s, d_m),
+            head_loss_hazen_williams(flow_m3s, d_m, length_m, roughness_c))

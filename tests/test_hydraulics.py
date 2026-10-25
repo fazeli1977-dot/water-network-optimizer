@@ -19,3 +19,10 @@ def test_optimal_diameter_selection():
     assert d_mm in [150.0, 200.0]
     assert 0.6 <= v <= 2.5
     assert hf > 0
+
+
+def test_oversized_flow_reports_nonzero_head_loss():
+    from water_network_optimizer.hydraulics import select_optimal_diameter
+    d, v, hf = select_optimal_diameter(2000, 100)
+    assert d == 500.0 and hf > 0
+
