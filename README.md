@@ -1,4 +1,4 @@
-# Water Network Optimizer
+﻿# Water Network Optimizer
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -48,6 +48,12 @@ python -m water_network_optimizer examples/sample_network.json --csv outputs/siz
 
 `--min-v` and `--max-v` change the allowable velocity band. The command prints total network length and total head loss, and writes the sizing table to the CSV path.
 
+## Scope & Engineering Assumptions
+
+- **Steady-State Hazen-Williams Sizing:** Computes frictional head loss and selects discrete commercial pipe diameters within a target velocity band (`0.6-2.5 m/s` by default).
+- **Not a Full Looped Solver:** Intended for preliminary pipe sizing and head-loss screening on defined pipe segments/flows, rather than full looped-network pressure balancing (e.g., EPANET) or transient/water-hammer analysis.
+- **Minor Losses & Fittings:** Local/fitting losses and elevation/pump-curve hydraulics are outside the current scope unless accounted for externally.
+
 ## Tests
 
 ```bash
@@ -79,3 +85,4 @@ MIT License. See [LICENSE](LICENSE).
 ## Author
 
 Alireza Sani — [fazeli1977-dot](https://github.com/fazeli1977-dot)
+
